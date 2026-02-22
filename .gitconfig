@@ -1,0 +1,24 @@
+[init]
+    defaultBranch = main
+
+[user]
+    name = Jeremy Schlachter
+    email = jeremy.schlachter@west94.org
+
+[credential]
+
+[core]
+    editor = vim
+    pager = less -F -X -R
+
+[pull]
+    ff = true
+
+[alias]
+    hist = log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    df = diff
+    lg = log --graph --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --date=short
