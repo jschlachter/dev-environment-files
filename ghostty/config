@@ -1,0 +1,19 @@
+
+
+# typography
+font-family="JetBrainsMono Nerd Font Mono"
+font-size=13
+font-thicken=true
+font-thicken-strength=1
+
+# aesthetics
+background-opacity=0.85
+background-blur=true
+window-padding-x=10
+window-padding-y=2
+theme=Catppuccin Mocha
+adjust-cell-height=1
+
+# shell
+shell-integration = zsh
+
