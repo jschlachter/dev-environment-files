@@ -1,18 +1,32 @@
+# =============================================
 # Aliases
-# ---------
-#
+# =============================================
 alias vim="nvim"
 alias vi="nvim"
 alias cls="clear && printf '\e[3J'"
-alias ls="ls -ahl"
 alias mkdir='mkdir -p'
-alias tree='tree -C'
+
+# Better ls
+alias ls='eza --icons'
+
+# Detailed listing
+alias ll='eza -lh --icons --git'
+
+# Detailed listing including hidden files
+alias la='eza -lah --icons --git'
+
+# Tree view
+alias tree='eza --tree --icons'
 
 alias diff='diff --color=auto'
 
-# git shortcuts 
-# -------------------
-#
+# Better cat
+alias cat='bat'
+
+
+# ============================================
+# Git shortcuts 
+# ============================================
 alias gaa='git add --all'
 alias gss='git status -s'
 alias gst='git status'
@@ -22,9 +36,9 @@ alias gb='git branch'
 alias gba='git branch --all'
 alias gcmsg='git commit --verbose --message'
 
-#
+# =====================================================
 # Podman shortcuts
-#
+# =====================================================
 alias pm='podman'
 alias pmcls='podman container ls -a'
 alias pmi='podman images'
@@ -36,5 +50,7 @@ alias zshrc='vim ~/.zshrc'
 alias aliases='vim ~/.zsh/aliases.zsh'
 alias sship='vim ~/.config/starship.toml'
 
-# mac OS shortcuts
+# =============================================
+# macOS shortcuts
+# ============================================
 alias code="open -a 'Visual Studio Code - Insiders'"
