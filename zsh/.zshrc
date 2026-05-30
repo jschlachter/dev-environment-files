@@ -38,11 +38,22 @@ setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
 # Initialize zoxide
 eval "$(zoxide init zsh)"
 
-# Activate syntax highlighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Activate autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  ZSH_PLUGIN_ROOT="$(brew --prefix)/share"
+else 
+  ZSH_PLUGIN_ROOT="/usr/share"
+fi
+
+# Activate syntax highlighting
+if [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# Activate auto suggestions
+if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 
+fi
 
 # =========================================================
 # Completion
